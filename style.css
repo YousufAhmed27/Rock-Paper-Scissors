@@ -1,0 +1,433 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url(./BarlowSemiCondensed-Bold.ttf)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%)70%);
+    background-repeat: no-repeat;
+    background-color: hsl(237, 49%, 15%);
+    font-family: Barlow;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.contain {
+    width: 900px;
+    height: 500px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.left,
+.right {
+    width: 150px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 8px 6px 0 black;
+}
+
+.left:hover,
+.right:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.flex {
+    display: flex
+}
+
+.c {
+    flex-direction: column;
+}
+
+.container {
+    width: 900px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    gap: 70px;
+    display: flex;
+}
+
+.container.f {
+    display: none
+}
+
+.head {
+    width: 50%;
+    height: 80px;
+    justify-content: space-between;
+    border: rgba(255, 255, 255, 0.4) 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container.second .head {
+    height: 100px;
+}
+
+.head img {
+    width: 80px;
+}
+
+.head .score {
+    border-radius: 3px;
+    width: 20%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.score span {
+    font-size: 0.5rem;
+    color: hsl(229, 64%, 46%);
+    letter-spacing: 2px;
+}
+
+.score .num {
+    font-size: 1.8rem;
+    color: hsl(217, 16%, 45%);
+}
+
+.body {
+    width: 260px;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    display: none;
+}
+
+.body.ac {
+    display: flex;
+}
+
+.cir {
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    padding: 11px;
+    aspect-ratio: 1 / 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cir::before {
+    content: "";
+    width: 75%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+
+.cir img {
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+}
+
+.cir[data-type="Paper"] {
+    background-image: linear-gradient(to top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%))
+}
+
+.cir[data-type="Scissors"] {
+    background-image: linear-gradient(to top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%))
+}
+
+.cir[data-type="Rock"] {
+    background-image: linear-gradient(to top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%))
+}
+
+.cir[data-type="Lizard"] {
+    background-image: linear-gradient(to top left, hsl(261, 73%, 60%), hsl(261, 72%, 63%))
+}
+
+.cir[data-type="Spock"] {
+    background-image: linear-gradient(to top left, hsl(189, 59%, 53%), hsl(189, 58%, 57%))
+}
+
+
+.container.second .choose .cir[data-type="Scissors"] {
+    left: 30%;
+}
+
+.container.second .choose .cir[data-type="Spock"] {
+    right: 73%;
+    top: 100px;
+}
+
+.container.second .choose .cir[data-type="Paper"] {
+    bottom: 50px;
+    left: 200px;
+}
+
+.container.second .choose .cir[data-type="Rock"] {
+    right: -30%;
+    bottom: 50px;
+}
+
+.container.second .choose .cir[data-type="Lizard"] {
+    top: 100px;
+    right: 150px;
+}
+
+.line {
+    position: absolute;
+    width: 100px;
+    height: 9px;
+    background-color: hsl(237, 49%, 15%, 0.4);
+    z-index: -1;
+}
+
+.one {
+    top: 50px;
+}
+
+.two {
+    top: 106px;
+    left: 0;
+    transform: rotate(58deg);
+    width: 150px;
+}
+
+.three {
+    top: 106px;
+    right: 0px;
+    transform: rotate(-64deg);
+    width: 150px;
+}
+
+.container.second .one {
+    left: 70px;
+    top: 300px;
+}
+
+.container.second .two {
+    left: -45px;
+    top: 216px;
+    transform: rotate(75deg);
+}
+
+.container.second .three {
+    left: 151px;
+    top: 216px;
+    transform: rotate(-75deg);
+}
+
+.container.second .four {
+    left: 27px;
+    top: 99px;
+    transform: rotate(134deg);
+}
+
+.container.second .five {
+    right: 20px;
+    top: 99px;
+    transform: rotate(-134deg);
+}
+
+button {
+    align-self: end;
+    background-color: transparent;
+    border: rgba(255, 255, 255, 0.5) 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    width: 67px;
+    height: 30px;
+    font-size: 0.5rem;
+    color: rgb(255 255 255 / 48%);
+    cursor: pointer;
+}
+
+.card.s {
+    width: 254px;
+    height: 273px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    padding: 20px;
+    gap: 20px;
+    z-index: 2;
+    display: flex;
+}
+
+.container.second .card.s {
+    gap: 10px;
+}
+
+.card {
+    display: none
+}
+
+.overview.s {
+    content: "";
+    background-color: rgb(0, 0, 0, 0.4);
+    position: absolute;
+    width: 130%;
+    height: 200%;
+    top: -7px;
+    left: -7px;
+    z-index: 1
+}
+
+.card .top {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .top span {
+    font-size: 1.2rem;
+    color: hsl(229, 25%, 31%);
+}
+
+.card .top img {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.body.playing {
+    width: max-content;
+    gap: 90px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.body.playing div {
+    align-items: center;
+    gap: 50px;
+}
+
+.body.playing .cir {
+    width: 130px;
+}
+
+.body.playing .cir[data-type="none"] {
+    background-color: transparent;
+}
+
+.body.playing .cir[data-type="none"] img {
+    display: none;
+}
+
+.body.playing .cir[data-type="none"]::before {
+    background-color: hsl(237, 49%, 15%, 0.2);
+}
+
+.body.playing .cir.w::after {
+    content: "";
+    width: 250%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0.3) 45%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0.1) 60%);
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.body.playing .c span {
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.body.playing .control {
+    flex-direction: column;
+    width: 125px;
+    gap: 10px;
+    display: none;
+}
+
+.body.playing .control.w {
+    display: flex
+}
+
+.control span {
+    font-size: 2rem;
+    color: white
+}
+
+.control button {
+    width: 100%;
+    height: 25px;
+    align-self: center;
+    background-color: white;
+    color: hsl(217, 16%, 45%);
+    font-weight: 900;
+}
+
+
+@media screen and (max-width:1024px) {
+
+    .container,
+    .contain {
+        width: 768px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .container,
+    .contain {
+        width: 425px;
+    }
+}
+
+@media screen and (max-width:438px) {
+
+    .container,
+    .contain {
+        width: 100%;
+    }
+
+    .head {
+        width: 90%
+    }
+
+    button {
+        align-self: center;
+    }
+
+    .card.s {
+        width: 100%;
+        height: 100%;
+        gap: 50px;
+    }
+
+    .body.playing .control {
+        position: absolute;
+        bottom: -50px;
+    }
+}

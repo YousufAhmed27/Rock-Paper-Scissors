@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <div class="contain">
+    <div class="left">Easy</div>
+    <div class="right">Hard</div>
+  </div>
+  <div class="container first c f">
+    <div class="head flex">
+      <img src="./images/logo.svg" alt="logo">
+      <div class="score flex c">
+        <span>SCORE</span>
+        <div class="num">00</div>
+      </div>
+    </div>
+
+    <div class="body flex choose ac">
+      <div class="cir flex" data-type="Paper"><img src="./images/icon-paper.svg" alt="Paper"></div>
+      <div class="cir flex" data-type="Scissors"><img src="./images/icon-scissors.svg" alt="Scissors"></div>
+      <div class="cir flex" data-type="Rock"><img src="./images/icon-rock.svg" alt="Rock"></div>
+
+      <div class="line one"></div>
+      <div class="line two"></div>
+      <div class="line three"></div>
+    </div>
+
+    <div class="body playing flex ">
+      <div class="player flex c">
+        <span>You Picked</span>
+        <div class="cir flex" data-type="Rock"><img src="./images/icon-rock.svg" alt="playing"></div>
+      </div>
+      <div class="control flex">
+        <span>YOU WIN</span>
+        <button>Play Again</button>
+      </div>
+      <div class="comp flex c">
+        <span>The House Picked</span>
+        <div class="cir flex " data-type="none"><img src="./images/icon-rock.svg" alt="playing"></div>
+      </div>
+    </div>
+
+    <button class="RULES">RULES</button>
+
+    <div class="card flex c">
+      <div class="top flex">
+        <span>RULES</span>
+        <img src="./images/icon-close.svg" alt="icon-close">
+      </div>
+      <img class="rule" src="./images/image-rules.svg" alt="RULES">
+    </div>
+  </div>
+  <div class="overview"></div>
+
+
+  <div class="container second c f">
+    <div class="head flex">
+      <img src="./images/logo-bonus.svg" alt="logo">
+      <div class="score flex c">
+        <span>SCORE</span>
+        <div class="num">12</div>
+      </div>
+    </div>
+
+    <div class="body flex choose ac">
+      <div class="cir flex" data-type="Scissors"><img src="./images/icon-scissors.svg" alt="Scissors"></div>
+      <div class="cir flex" data-type="Spock"><img src="./images/icon-spock.svg" alt="spock"></div>
+      <div class="cir flex" data-type="Paper"><img src="./images/icon-paper.svg" alt="Paper"></div>
+      <div class="cir flex" data-type="Lizard"><img src="./images/icon-lizard.svg" alt="Lizard"></div>
+      <div class="cir flex" data-type="Rock"><img src="./images/icon-rock.svg" alt="Rock"></div>
+
+      <div class="line one"></div>
+      <div class="line two"></div>
+      <div class="line three"></div>
+      <div class="line four"></div>
+      <div class="line five"></div>
+    </div>
+
+    <div class="body playing flex">
+      <div class="player flex c">
+        <span>You Picked</span>
+        <div class="cir flex" data-type="Rock"><img src="./images/icon-rock.svg" alt="playing"></div>
+      </div>
+      <div class="control flex">
+        <span>YOU WIN</span>
+        <button>Play Again</button>
+      </div>
+      <div class="comp flex c">
+        <span>The House Picked</span>
+        <div class="cir flex " data-type="none"><img src="./images/icon-rock.svg" alt="playing"></div>
+      </div>
+    </div>
+
+    <button class="RULES">RULES</button>
+
+    <div class="card flex c ">
+      <div class="top flex">
+        <span>RULES</span>
+        <img src="./images/icon-close.svg" alt="icon-close">
+      </div>
+      <img class="rule" src="./images/image-rules-bonus.svg" alt="RULES">
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Yousuf Gamal Eldin</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
